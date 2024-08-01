@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Footer from "./Footer"
 
 interface MobileNavProps {
   user: {
@@ -44,7 +45,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Horizontal Logo"
+              alt="Horizon Logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
           </Link>
@@ -77,7 +78,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 USER
               </nav>
             </SheetClose>
-            FOOTER
+            <Footer user={user} type="mobile"/>
           </div>
         </SheetContent>
       </Sheet>
